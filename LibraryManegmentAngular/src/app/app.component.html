@@ -1,0 +1,21 @@
+<h1> Library Managment </h1>
+
+<div *ngFor="let x of  liberay">
+  <a [routerLink]="" (click)="showBooks(x.id)">{{x.name}}</a>
+  
+  </div>
+
+  <button (click)="showLibrary()" *ngIf="falg; else bookBlock"> Dispaly Liberary </button>
+  
+  <ng-template #bookBlock>
+    <br>
+    
+  <div *ngFor="let x of  books">
+ <div>{{x.name}} </div>
+
+  </div>
+  </ng-template>
+
+
+
+<router-outlet></router-outlet>
